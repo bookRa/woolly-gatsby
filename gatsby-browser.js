@@ -1,4 +1,7 @@
-import wrapWithProvider from './wrap-with-provider'
 
+import React from 'react'
+import CartProvider from "./src/components/Context/CartProvider";
 // eslint-disable-next-line import/prefer-default-export
-export const wrapRootElement = wrapWithProvider
+export const wrapRootElement = ({ element }) => (
+    <CartProvider>{element}</CartProvider>
+)

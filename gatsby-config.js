@@ -20,6 +20,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'bo4pb68d',
+        dataset: 'production',
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.MY_SANITY_TOKEN,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
